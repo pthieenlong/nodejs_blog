@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect ./index.js localhost 8080"
+    "start": "nodemon --inspect ./src/index.js localhost 8080",
+    "watch": "node-sass -w ./src/resources/scss/ --output ./src/public/css/"
   },
   "repository": {
     "type": "git",
@@ -23,9 +24,12 @@
   },
   "homepage": "https://github.com/pthieenlong/nodejs_blog#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1",
     "nodemon": "^2.0.12"
   }
 }
